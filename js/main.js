@@ -32,6 +32,16 @@ function addNewTodo(e) {
     li.appendChild(divBtn)
     //*=============================================================
     //! add attribute
+    li.classList.add('result-li')
+    inp.classList.add('result-input')
+    saveBtn.classList.add('custom-btn')
+    saveBtn.classList.add('btn-5')
+    editBtn.classList.add('custom-btn')
+    editBtn.classList.add('btn-4')
+    editBtn.classList.add('btn')
+    removeBtn.classList.add('custom-btn')
+    removeBtn.classList.add('btn-4')
+
     inp.disabled = true
     //*=============================================================
     //! inner text
@@ -83,7 +93,6 @@ document.addEventListener('DOMContentLoaded', getTasksOnLoad)
 function getTasksOnLoad() {
   if (localStorage.getItem('key')) {
     elTodos = JSON.parse(localStorage.getItem('key'))
-    console.log('hiii')
   }
 
   elTodos.forEach((todo) => {
@@ -107,6 +116,16 @@ function getTasksOnLoad() {
     li.appendChild(divBtn)
     //*=============================================================
     //! add attribute
+    li.classList.add('result-li')
+    inp.classList.add('result-input')
+    saveBtn.classList.add('custom-btn')
+    saveBtn.classList.add('btn-5')
+    editBtn.classList.add('custom-btn')
+    editBtn.classList.add('btn-4')
+    editBtn.classList.add('btn')
+    removeBtn.classList.add('custom-btn')
+    removeBtn.classList.add('btn-4')
+
     inp.disabled = true
     //*=============================================================
     //! inner text on load
