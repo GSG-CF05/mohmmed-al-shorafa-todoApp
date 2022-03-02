@@ -4,22 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/madia.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <h1>😎Welcome Guy's😎</h1>
-      <h2>😍To Do App😍</h2>
-    </header>
-    <main>
-      <form action="">
-        <input class="input-todo" type="text" />
-        <button class="btn-todo">
-          <h3>ADD ME</h3>
-        </button>
-      </form>
-      <ul class="list-todo"></ul>
-    </main>
+    <div class="cont">
+      <header class="header">
+        <h2>To Do App</h2>
+      </header>
+      <main>
+        <form class="my-form" action="">
+          <input class="input-todo" type="text" placeholder="Add here" />
+          <button class="btn-todo custom-btn btn-10">
+            <h3>ADD ME</h3>
+          </button>
+        </form>
+        <ul class="list-todo"></ul>
+      </main>
+    </div>
     <script src="./js/main.js"></script>
   </body>
 </html>
