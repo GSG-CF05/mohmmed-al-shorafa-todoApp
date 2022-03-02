@@ -36,7 +36,7 @@ main {
 .input-todo {
   display: block;
   margin: auto;
-  width: 300px;
+  width: 85%;
   height: 50px;
   border-radius: 20px;
   border: none;
@@ -239,4 +239,27 @@ main {
 }
 .btn-4 span:hover:after {
   width: 100%;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c9999927;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(247, 167, 167, 0.452);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.the-game {
+  display: none;
 }
