@@ -32,6 +32,9 @@
     margin-top: 30px;
     display: flex;
   }
+  .list-todo {
+    height: 400px;
+  }
   .result-div {
     width: 83%;
   }
