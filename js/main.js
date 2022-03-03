@@ -58,6 +58,9 @@ function addNewTodo(e) {
     function removeElement() {
       li.remove()
       elTodos = JSON.parse(localStorage.getItem('key'))
+      let elementIndex = elTodos.indexOf(inp.value)
+      elTodos.splice(elementIndex, 1)
+      localStorage.setItem('key', JSON.stringify(elTodos))
     }
 
     //!======================= editElement =========================
@@ -142,11 +145,8 @@ function getTasksOnLoad() {
     function removeElement() {
       li.remove()
       elTodos = JSON.parse(localStorage.getItem('key'))
-      // console.log(elementsValue);
       let elementIndex = elTodos.indexOf(inp.value)
-      // console.log(elementIndex, 123);
       elTodos.splice(elementIndex, 1)
-      // console.log(elementsValue, 222);
       localStorage.setItem('key', JSON.stringify(elTodos))
     }
 
