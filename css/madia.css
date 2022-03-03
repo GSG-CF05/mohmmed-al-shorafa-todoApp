@@ -1,79 +1,38 @@
 @media (min-width: 767px) {
+  .my-form {
+    display: flex;
+    justify-content: center;
+  }
   .cont {
     margin-right: 20px;
-    width: 45%;
+    width: 90%;
   }
   .input-todo {
-    display: inline;
-    width: 75%;
+    display: block;
+    width: 95%;
+    margin: 0;
   }
   .btn-todo {
-    display: inline;
+    display: block;
     width: 150px !important;
     margin: 15px;
     position: relative;
-    bottom: 4px;
+    bottom: 15px;
   }
   .result-input {
-    width: 75%;
+    width: 95%;
+    text-align: center;
   }
   .btn-4 {
-    width: 150px !important;
+    width: 70px !important;
+    position: relative;
+    bottom: 6px;
   }
-
-  /* game  */
-
-  @media (min-width: 1267px) {
-    body {
-      justify-content: space-between;
-    }
-    .the-game {
-      display: block;
-    }
-    .the-game header {
-      width: 800px;
-      height: 500px;
-      background: rgb(70, 153, 62);
-      margin: auto;
-      border-radius: 12px;
-      margin-top: 50px;
-    }
-    .the-game section {
-      margin: auto;
-      width: 30%;
-      display: flex;
-      justify-content: center;
-      border-radius: 12px;
-    }
-    .the-game section div {
-      padding: 15px;
-      border: 3px solid rgb(241, 105, 15);
-      background-color: black;
-      color: white;
-      border-radius: 12px;
-      transition: all 0.07s ease;
-      width: 114px;
-      text-align: center;
-      font-size: 25px;
-      margin: 15px;
-    }
-    .poring {
-      transform: rotateY(180deg);
-      position: relative;
-    }
-    .poring-left {
-      position: relative;
-      transform: rotateY(0);
-    }
-    .playing {
-      border: 4px solid orange;
-      color: black;
-      background-color: rgb(241, 105, 15);
-      transform: scale(1.1);
-    }
-    .poringa {
-      position: relative;
-      left: -64px;
-    }
+  .result-li {
+    margin-top: 30px;
+    display: flex;
+  }
+  .result-div {
+    width: 83%;
   }
 }

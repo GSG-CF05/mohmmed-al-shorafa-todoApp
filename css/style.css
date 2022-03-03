@@ -4,10 +4,11 @@
   box-sizing: border-box;
 }
 :root {
-  --body-color: #fff;
-  --card-bg: #f0f2fa;
-  --heading-color: #1e202a;
+  --color: rgb(241, 229, 229);
+  --input-r: #21b5a633;
+  --heading-color: #009687;
   --text-color: #9cdbff;
+  --input-todo: #21b5a6b9;
 }
 body {
   display: flex;
@@ -17,7 +18,7 @@ body {
 }
 .cont {
   margin-top: 60px;
-  background-color: rgb(0 86 255 / 34%);
+  background-color: var(--heading-color);
   border-radius: 12px;
   padding: 20px;
 }
@@ -26,7 +27,7 @@ body {
   margin-top: 40px;
   font-family: system-ui, sans-serif;
   font-size: 60px;
-  color: var(--text-color);
+  color: var(--color);
   text-shadow: 2px 2px 4px #000000;
 }
 main {
@@ -40,7 +41,8 @@ main {
   height: 50px;
   border-radius: 20px;
   border: none;
-  background-color: rgba(217, 221, 220, 0.356);
+  color: var(--color);
+  background-color: var(--input-todo);
   outline-style: none;
   padding-left: 30px;
   font-size: 30px;
@@ -60,11 +62,14 @@ main {
   height: 50px;
   border-radius: 8px;
   border: none;
-  background-color: rgba(217, 221, 220, 0.356);
+  color: var(--color);
+  background-color: var(--input-r);
   outline-style: none;
   padding-left: 30px;
   font-size: 30px;
   margin-right: 10px;
+}
+.result-div {
 }
 .custom-btn {
   width: 75px;
