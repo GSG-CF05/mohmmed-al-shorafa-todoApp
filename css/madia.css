@@ -38,4 +38,12 @@
   .result-div {
     width: 83%;
   }
+  .header h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: system-ui, sans-serif;
+    font-size: 60px;
+    color: var(--color);
+    text-shadow: 2px 2px 4px #000000;
+  }
 }
