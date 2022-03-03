@@ -20,12 +20,13 @@ function addNewTodo(e) {
     let saveBtn = document.createElement('button')
     let editBtn = document.createElement('button')
     let removeBtn = document.createElement('button')
-
+    let imgResult = document.createElement('img')
     //* ============================================================
     //! append
     listTodo.appendChild(li)
     divBtn.appendChild(editBtn)
     divBtn.appendChild(removeBtn)
+    divInput.appendChild(imgResult)
     divInput.appendChild(inp)
     divInput.appendChild(saveBtn)
     li.appendChild(divInput)
@@ -42,8 +43,10 @@ function addNewTodo(e) {
     editBtn.classList.add('btn')
     removeBtn.classList.add('custom-btn')
     removeBtn.classList.add('btn-4')
-
+    imgResult.classList.add('imgResult')
     inp.disabled = true
+    imgResult.setAttribute('src', './img/addme.gif')
+
     //*=============================================================
     //! inner text
     saveBtn.textContent = 'Save'
@@ -52,6 +55,15 @@ function addNewTodo(e) {
     inp.value = inputTodo.value
     //*=============================================================
     saveToLocalStorage()
+
+    //?============ to imgResult====================================
+
+    elTodos = JSON.parse(localStorage.getItem('key'))
+    if (elTodos.length % 2 == 0) {
+      imgResult.setAttribute('src', './img/addme.gif')
+    } else {
+      imgResult.setAttribute('src', './img/header-home.gif')
+    }
 
     //!========================== removeElement ====================
     removeBtn.addEventListener('click', removeElement)
@@ -108,16 +120,19 @@ function getTasksOnLoad() {
     let saveBtn = document.createElement('button')
     let editBtn = document.createElement('button')
     let removeBtn = document.createElement('button')
+    let imgResult = document.createElement('img')
 
     //* ============================================================
     //! append  on load
     listTodo.appendChild(li)
     divBtn.appendChild(editBtn)
     divBtn.appendChild(removeBtn)
+    divInput.appendChild(imgResult)
     divInput.appendChild(inp)
     divInput.appendChild(saveBtn)
     li.appendChild(divInput)
     li.appendChild(divBtn)
+
     //*=============================================================
     //! add attribute
     li.classList.add('result-li')
@@ -131,7 +146,9 @@ function getTasksOnLoad() {
     removeBtn.classList.add('custom-btn')
     removeBtn.classList.add('btn-4')
 
+    imgResult.classList.add('imgResult')
     inp.disabled = true
+
     //*=============================================================
     //! inner text on load
     saveBtn.textContent = 'Save'
@@ -139,6 +156,13 @@ function getTasksOnLoad() {
     removeBtn.textContent = 'Remove'
     inp.value = todo
     //*==============================================================
+    //?============ to imgResult====================================
+
+    if (elTodos.indexOf(elTodos) % 2 !== 0) {
+      imgResult.setAttribute('src', './img/addme.gif')
+    } else if (elTodos.indexOf(elTodos[i]) % 2 === 0) {
+      imgResult.setAttribute('src', './img/header-home.gif')
+    }
 
     //!============= removeElement in on load =======================
     removeBtn.addEventListener('click', removeElement)

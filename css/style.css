@@ -265,6 +265,6 @@ main {
   background: #555;
 }
 
-.the-game {
-  display: none;
+.imgResult {
+  transform: rotateY(180deg);
 }
