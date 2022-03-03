@@ -20,13 +20,13 @@
     bottom: 15px;
   }
   .result-input {
-    width: 95%;
+    width: 89%;
     text-align: center;
   }
   .btn-4 {
     width: 70px !important;
     position: relative;
-    bottom: 6px;
+    bottom: -6px;
   }
   .result-li {
     margin-top: 30px;
