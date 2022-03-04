@@ -182,7 +182,7 @@ function getTasksOnLoad() {
       elTodos.splice(elementIndex, 1)
       localStorage.setItem('key', JSON.stringify(elTodos))
     }
-    //!===================== saveElement ===========================
+    //!===================== saveElement ============================
     saveBtn.addEventListener('click', saveElement)
     function saveElement() {
       inp.disabled = true
