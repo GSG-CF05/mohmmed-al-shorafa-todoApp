@@ -79,18 +79,16 @@ function addNewTodo(e) {
     editBtn.addEventListener('click', editElement)
     function editElement() {
       inp.disabled = false
-      elTodos = JSON.parse(localStorage.getItem('key'))
       let elementIndex = elTodos.indexOf(inp.value)
-      elTodos.splice(elementIndex, 1)
-      localStorage.setItem('key', JSON.stringify(elTodos))
-    }
-    //!===================== saveElement ===========================
-    saveBtn.addEventListener('click', saveElement)
-    function saveElement() {
-      inp.disabled = true
-      elTodos = JSON.parse(localStorage.getItem('key'))
-      elTodos.push(inp.value)
-      localStorage.setItem('key', JSON.stringify(elTodos))
+
+      //!===================== saveElement ===========================
+      saveBtn.addEventListener('click', saveElement, { once: true })
+      function saveElement() {
+        inp.disabled = true
+        elTodos = JSON.parse(localStorage.getItem('key'))
+        elTodos.splice(elementIndex, 1, inp.value)
+        localStorage.setItem('key', JSON.stringify(elTodos))
+      }
     }
   }
   inputTodo.value = ''
@@ -177,18 +175,16 @@ function getTasksOnLoad() {
     editBtn.addEventListener('click', editElement)
     function editElement() {
       inp.disabled = false
-      elTodos = JSON.parse(localStorage.getItem('key'))
       let elementIndex = elTodos.indexOf(inp.value)
-      elTodos.splice(elementIndex, 1)
-      localStorage.setItem('key', JSON.stringify(elTodos))
-    }
-    //!===================== saveElement ============================
-    saveBtn.addEventListener('click', saveElement)
-    function saveElement() {
-      inp.disabled = true
-      elTodos = JSON.parse(localStorage.getItem('key'))
-      elTodos.push(inp.value)
-      localStorage.setItem('key', JSON.stringify(elTodos))
+
+      //!===================== saveElement ===========================
+      saveBtn.addEventListener('click', saveElement, { once: true })
+      function saveElement() {
+        inp.disabled = true
+        elTodos = JSON.parse(localStorage.getItem('key'))
+        elTodos.splice(elementIndex, 1, inp.value)
+        localStorage.setItem('key', JSON.stringify(elTodos))
+      }
     }
   }
 }
