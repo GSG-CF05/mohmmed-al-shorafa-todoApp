@@ -110,8 +110,7 @@ function getTasksOnLoad() {
   if (localStorage.getItem('key')) {
     elTodos = JSON.parse(localStorage.getItem('key'))
   }
-
-  elTodos.forEach((todo) => {
+  for (let i = 0; i < elTodos.length; i++) {
     // !declaration  on load
     let li = document.createElement('li')
     let inp = document.createElement('input')
@@ -154,13 +153,13 @@ function getTasksOnLoad() {
     saveBtn.textContent = 'Save'
     editBtn.textContent = 'Edit'
     removeBtn.textContent = 'Remove'
-    inp.value = todo
+    inp.value = elTodos[i]
     //*==============================================================
     //?============ to imgResult====================================
 
-    if (elTodos.indexOf(elTodos) % 2 !== 0) {
+    if (i % 2 != 0) {
       imgResult.setAttribute('src', './img/addme.gif')
-    } else if (elTodos.indexOf(elTodos[i]) % 2 === 0) {
+    } else if (i % 2 == 0) {
       imgResult.setAttribute('src', './img/header-home.gif')
     }
 
@@ -191,5 +190,5 @@ function getTasksOnLoad() {
       elTodos.push(inp.value)
       localStorage.setItem('key', JSON.stringify(elTodos))
     }
-  })
+  }
 }
